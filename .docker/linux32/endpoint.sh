@@ -19,7 +19,7 @@ make clean
 find . -type f -name '*.o' -delete
 
 make ${MAKEOPTS}
-make -C src check-security
+make ${MAKEOPTS} -C src check-security
 
 mkdir -p ${INSTALLPATH}
 make install DESTDIR=${INSTALLPATH}

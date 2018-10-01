@@ -16,11 +16,12 @@ RUN apt --yes install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-
 RUN apt --yes install autoconf curl
 
 WORKDIR /home/project
-ADD ./endpoint.sh /endpoint.sh
-RUN chmod 755 /endpoint.sh
 
 RUN mkdir /.ccache/
 RUN mkdir /.ccache/tmp
 RUN chmod -R 0777 /.ccache/
+
+ADD ./endpoint.sh /endpoint.sh
+RUN chmod 755 /endpoint.sh
 
 CMD /endpoint.sh
