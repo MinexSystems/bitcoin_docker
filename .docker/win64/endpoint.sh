@@ -19,8 +19,8 @@ CONFIG_SITE=$PWD/depends/${HOSTS}/share/config.site ./configure --prefix=/ --dis
 make clean
 find . -type f -name '*.o' -delete
 
-make ${MAKEOPTS}
-make -C src check-security
+make ${MAKEOPTS} all
+make ${MAKEOPTS} -C src check-security
 make deploy
 
 mkdir -p ${INSTALLPATH}

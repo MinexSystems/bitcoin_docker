@@ -19,8 +19,8 @@ CONFIG_SITE=$PWD/depends/${HOSTS}/share/config.site ./configure --prefix=/ --ena
 make clean
 find . -type f -name '*.o' -delete
 
-make all -i -j `nproc --all`
-make -C src check-security
+make ${MAKEOPTS} all
+make ${MAKEOPTS} -C src check-security
 make deploy
 
 mkdir -p ${INSTALLPATH}
