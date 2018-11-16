@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 RUN apt update
 RUN apt --yes install software-properties-common
 RUN add-apt-repository ppa:bitcoin/bitcoin

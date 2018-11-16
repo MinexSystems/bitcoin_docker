@@ -8,7 +8,7 @@ RUN apt update
 RUN apt-get --yes install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl ccache
 RUN apt-get --yes install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
 
-RUN apt-get --yes python
+RUN apt-get --yes python3
 
 WORKDIR /home/project
 ADD ./endpoint.sh /endpoint.sh
